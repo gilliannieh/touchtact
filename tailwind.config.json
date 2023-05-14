@@ -1,0 +1,34 @@
+{
+  "colors": {
+    "text": "#FAFAF5",
+    "light grey": "#F5F5F0",
+    "medium grey": "#F0F0EB",
+    "background": "#191919",
+    "secondary background": "#262626",
+    "light periwinkle": "#E1E1F8",
+    "periwinkle": "#909CFF",
+    "dark periwinkle": "#4F5EE3",
+    "error": "#D83058"
+  },
+  "spacers": {
+    "1": "5px",
+    "2": "15px",
+    "3": "20px",
+    "4": "25px",
+    "5": "35px",
+    "6": "45px",
+    "7": "75px",
+    "8": "100px"
+  },
+  "fontSizes": {
+    "head": ["50px", "68px"],
+    "smallhead": ["30px", "41px"],
+    "subhead": ["20px", "27px"],
+    "paragraph": ["16px", "22px"],
+    "detail": ["12px", "16px"]
+  },
+  "fontFamily": {
+    "satoshi": ["Satoshi", "sans-serif"]
+  }
+}
+
