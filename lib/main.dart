@@ -1,8 +1,7 @@
-import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:provider/provider.dart';
 import 'package:touchtact/pages/home.dart';
+import 'package:touchtact/pages/signup.dart';
 
 void main() {
   runApp(const TouchTact());
@@ -25,8 +24,14 @@ class TouchTact extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: Page(),
+      ),
+      theme: ThemeData(
+        scaffoldBackgroundColor: const Color(0XFF212121),
+        textSelectionTheme: TextSelectionThemeData(
+          cursorColor: Colors.white, //<-- SEE HERE
+        ),
       )
-      );
+    );
   }
 }
 
@@ -46,17 +51,18 @@ class _PageState extends State<Page> {
 
   static List<Widget> _widgetOptions = <Widget>[
     // HOME PAGE
-    const HomePage(),
+    HomePage(),
     // EXCHANGE PAGE placeholder
     Text(
       'Exchange Page',
       style: optionStyle,
     ),
     // PROFILE PAGE placeholder
-    Text(
-      'Profile Page',
-      style: optionStyle,
-    ),
+    // Text(
+    //   'Profile Page',
+    //   style: optionStyle,
+    // ),
+    SignupPage(),
   ];
 
   void _onItemTapped(int index) {

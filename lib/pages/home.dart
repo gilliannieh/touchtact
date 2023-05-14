@@ -14,46 +14,42 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(children: [
-        // BACKGROUND
-        Expanded(
-          child: Container(
-            color: Colors.grey[900],
+      body: Column(
+        children: [
+          // HEADER
+          Padding(
+            padding: const EdgeInsets.only(top: 150.0, left: 40, right: 40),
+            child: const Header(),
           ),
-        ),
-        // BODY
-        Column(
-          children: [
-            // HEADER
-            Padding(
-              padding: const EdgeInsets.only(top: 150.0, left: 40, right: 40),
-              child: const Header(),
-            ),
-            // BIZ CARD
-            Padding(
-              padding: const EdgeInsets.only(top: 10.0, left: 37, right: 37),
-              child: const BizCard(),
-            ),
-            // "YOUR CONNECTIONS"
-            Padding(
-                padding: const EdgeInsets.only(top: 30, left: 40, right: 40),
-                child: Align(
-                  alignment: Alignment.topLeft,
-                  child: Text(
-                    'your connections',
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.w500),
-                  ),
-                )),
-            Padding(
-                padding: EdgeInsets.only(top: 15, left: 37, right: 37),
-                child: ListOfConnections()
+          // BIZ CARD
+          Padding(
+            padding: const EdgeInsets.only(top: 10.0, left: 37, right: 37),
+            child: const BizCard(),
+          ),
+          // "YOUR CONNECTIONS"
+          Padding(
+            padding: const EdgeInsets.only(top: 30, left: 40, right: 40),
+            child: Align(
+            alignment: Alignment.topLeft,
+              child: Text(
+                'your connections',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                  fontWeight: FontWeight.w500
+                ),
+              ),
             )
-          ],
-        ),
-      ]),
+          ),
+          Padding(
+            padding: EdgeInsets.only(top: 15, left: 37, right: 37),
+            child: Align(
+              alignment: Alignment.topLeft,
+              child: Text('Eagan Notokusumo'),
+            )
+          ),
+        ],
+      ),
     );
   }
 }
@@ -182,18 +178,18 @@ class _BizCardState extends State<BizCard> {
 }
 
 // LIST OF CONNECTIONS CLASS
-class ListOfConnections extends StatelessWidget {
-  final connectionsData = ConnectionsData.getData;
+// class ListOfConnections extends StatelessWidget {
+//   final connectionsData = ConnectionsData.getData;
 
-  @override
-  Widget build(BuildContext context) {
-    return ListView.builder(
-      itemCount: connectionsData.length,
-      itemBuilder: (data, index) {
-      }
-    );
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return ListView.builder(
+//       itemCount: connectionsData.length,
+//       itemBuilder: (data, index) {
+//       }
+//     );
+//   }
+// }
 
 // CARD WIDGET
 
