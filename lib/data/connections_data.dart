@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 // DATA FOR LIST
 class ConnectionsData {
-  static final getData = [
+  static final connectionData = [
     {
       'name': 'Eagan Notokusumo',
       'time': '20sec',

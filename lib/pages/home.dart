@@ -41,13 +41,9 @@ class _HomePageState extends State<HomePage> {
               ),
             )
           ),
-          Padding(
-            padding: EdgeInsets.only(top: 15, left: 37, right: 37),
-            child: Align(
-              alignment: Alignment.topLeft,
-              child: Text('Eagan Notokusumo'),
-            )
-          ),
+          Expanded(
+            child: ListOfConnections()
+          )
         ],
       ),
     );
@@ -178,50 +174,47 @@ class _BizCardState extends State<BizCard> {
 }
 
 // LIST OF CONNECTIONS CLASS
-// class ListOfConnections extends StatelessWidget {
-//   final connectionsData = ConnectionsData.getData;
+class ListOfConnections extends StatelessWidget {
+  final data = ConnectionsData.connectionData;
 
-//   @override
-//   Widget build(BuildContext context) {
-//     return ListView.builder(
-//       itemCount: connectionsData.length,
-//       itemBuilder: (data, index) {
-//       }
-//     );
-//   }
-// }
-
-// CARD WIDGET
-
-Widget connectionCard(data) {
-  return Card(
-    elevation: 0,
-    color: Colors.transparent,
-    child: Column(
-      children: [
-        Align(
-          alignment: Alignment.topLeft,
-          child: Text(
-            data['name'],
-            style: TextStyle(
-              color: Colors.white, 
-              fontSize: 15, 
-              fontWeight: FontWeight.w400
+  @override
+  Widget build(BuildContext context) {
+    return ListView.builder(
+      padding: EdgeInsets.only(top: 10, left: 30, right: 30),
+      itemCount: data.length,
+      itemBuilder: (context, index) {
+        return Column(
+          children: [
+            ListTile(
+              title: Text(
+                '${data[index]}',
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w400
+                ),
+              ),
+              subtitle: Text(
+                'connected ${data[index]} ago',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 12,
+                  fontWeight: FontWeight.w300
+                )
+              ),
             ),
-          ),
-        ),
-        Align(
-          alignment: Alignment.topLeft,
-          child: Text(
-            data['time'],
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 12,
-              fontWeight: FontWeight.w300
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 15),
+              child: Divider(
+                color: Colors.white,
+                height: 10,
+                thickness: 1,
+              ),
             )
-          ),
-        )
-      ],
-    ),
-  );
+          ]
+        );
+      }
+    );
+  }
 }
+

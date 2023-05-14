@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:touchtact/pages/home.dart';
 import 'package:touchtact/pages/signup.dart';
+import 'package:touchtact/pages/profile.dart';
 
 void main() {
   runApp(const TouchTact());
@@ -30,6 +31,20 @@ class TouchTact extends StatelessWidget {
         textSelectionTheme: TextSelectionThemeData(
           cursorColor: Colors.white, //<-- SEE HERE
         ),
+        inputDecorationTheme: InputDecorationTheme(
+          enabledBorder: UnderlineInputBorder(
+            borderSide: BorderSide(
+              width: 1, 
+              color: Colors.white
+            ),
+          ),
+          focusedBorder: UnderlineInputBorder(
+            borderSide: BorderSide(
+              width: 1, 
+              color: Colors.indigoAccent.shade100
+            ),
+          ),
+        )
       )
     );
   }
@@ -62,7 +77,7 @@ class _PageState extends State<Page> {
     //   'Profile Page',
     //   style: optionStyle,
     // ),
-    SignupPage(),
+    ProfilePage(),
   ];
 
   void _onItemTapped(int index) {
