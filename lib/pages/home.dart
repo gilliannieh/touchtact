@@ -1,6 +1,4 @@
-import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'package:touchtact/data/connections_data.dart';
 
 class HomePage extends StatefulWidget {
@@ -135,37 +133,49 @@ class _BizCardState extends State<BizCard> {
                       height: 1.5,
                     ),
                   ),
-                  SizedBox(
-                      //height: 25,
-                      child: Row(children: [
-                    SizedBox(
-                        width: 20,
-                        child: Align(
-                          alignment: Alignment.topLeft,
-                          child:
-                              Icon(Icons.phone, color: Colors.white, size: 15),
-                        )),
-                    SizedBox(
-                        //width: 250,
-                        child: Text('(650) 823-1821',
-                            style:
-                                TextStyle(color: Colors.white, fontSize: 12))),
+                  Padding(
+                      padding: EdgeInsets.only(top: 70),
+                      child: Row(
+                        children: [
+                          SizedBox(
+                            width: 20,
+                            child: Align(
+                              alignment: Alignment.topLeft,
+                              child:
+                                Icon(
+                                  Icons.phone, 
+                                  color: Colors.white, 
+                                  size: 15
+                                ),
+                            )
+                          ),
+                          SizedBox(
+                            //width: 250,
+                            child: Text(
+                              '(650) 823-1821',
+                              style: TextStyle(
+                                color: Colors.white, 
+                                fontSize: 12
+                              )
+                            )
+                          ),
                   ])),
-                  SizedBox(
-                      //height: 25,
-                      child: Row(children: [
-                    SizedBox(
-                        width: 20,
-                        child: Align(
-                          alignment: Alignment.topLeft,
-                          child:
+                  Padding(
+                      padding: EdgeInsets.only(top: 2.0),
+                      child: Row(
+                        children: [
+                          SizedBox(
+                            width: 20,
+                            child: Align(
+                              alignment: Alignment.topLeft,
+                              child:
                               Icon(Icons.mail, color: Colors.white, size: 15),
-                        )),
-                    SizedBox(
-                        //width: 250,
-                        child: Text('gilliannieh@gmail.com',
+                            )
+                          ),
+                          Text('gilliannieh@gmail.com',
                             style:
-                                TextStyle(color: Colors.white, fontSize: 12))),
+                              TextStyle(color: Colors.white, fontSize: 12)
+                          ),
                   ])),
                 ],
               )),
@@ -180,14 +190,14 @@ class ListOfConnections extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      padding: EdgeInsets.only(top: 10, left: 30, right: 30),
+      padding: EdgeInsets.only(top: 10, left: 25, right: 25, bottom: 50),
       itemCount: data.length,
       itemBuilder: (context, index) {
         return Column(
           children: [
             ListTile(
               title: Text(
-                '${data[index]}',
+                '${data[index]['name']}',
                 style: TextStyle(
                     color: Colors.white,
                     fontSize: 16,
@@ -195,7 +205,7 @@ class ListOfConnections extends StatelessWidget {
                 ),
               ),
               subtitle: Text(
-                'connected ${data[index]} ago',
+                'connected ${data[index]['time']} ago',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 12,

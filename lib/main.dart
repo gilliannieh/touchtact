@@ -3,6 +3,8 @@ import 'package:flutter/services.dart';
 import 'package:touchtact/pages/home.dart';
 import 'package:touchtact/pages/signup.dart';
 import 'package:touchtact/pages/profile.dart';
+import 'package:touchtact/pages/exchange_home.dart';
+import 'package:touchtact/pages/exchange_collect.dart';
 
 void main() {
   runApp(const TouchTact());
@@ -61,22 +63,12 @@ class Page extends StatefulWidget {
 class _PageState extends State<Page> {
   int _selectedIndex = 0;
 
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-
   static List<Widget> _widgetOptions = <Widget>[
     // HOME PAGE
     HomePage(),
-    // EXCHANGE PAGE placeholder
-    Text(
-      'Exchange Page',
-      style: optionStyle,
-    ),
-    // PROFILE PAGE placeholder
-    // Text(
-    //   'Profile Page',
-    //   style: optionStyle,
-    // ),
+    // EXCHANGE PAGE
+    ExchangePage(),
+    // PROFILE PAGE
     ProfilePage(),
   ];
 

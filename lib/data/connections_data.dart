@@ -6,31 +6,31 @@ class ConnectionsData {
   static final connectionData = [
     {
       'name': 'Eagan Notokusumo',
-      'time': '20sec',
+      'time': '20 sec',
     },
     {
       'name': 'Samar Saleem',
-      'time': '20min',
+      'time': '20 min',
     },
     {
       'name': 'Damien Koh',
-      'time': '2hr',
+      'time': '2 hr',
     },
     {
       'name': 'Steve Ewald',
-      'time': '3hr',
+      'time': '3 hr',
     },
     {
       'name': 'Alexis Robles',
-      'time': '2d',
+      'time': '2 days',
     },
     {
       'name': 'Daphne Zuckerman',
-      'time': '2d',
+      'time': '2 days',
     },
     {
       'name': 'Sneh Deshpande',
-      'time': '3d',
+      'time': '3 days',
     },
   ];
 }

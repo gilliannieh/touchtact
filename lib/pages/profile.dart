@@ -8,6 +8,22 @@ class ProfilePage extends StatefulWidget {
 }
 
 class _ProfilePageState extends State<ProfilePage> {
+  final userFirst = TextEditingController();
+  final userLast = TextEditingController();
+  final userPhone = TextEditingController();
+  final userEmail = TextEditingController();
+  final userCity = TextEditingController();
+
+  @override
+  void dispose() {
+    userFirst.dispose();
+    userLast.dispose();
+    userPhone.dispose();
+    userEmail.dispose();
+    userCity.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -35,6 +51,7 @@ class _ProfilePageState extends State<ProfilePage> {
         Padding(
           padding: const EdgeInsets.only(top: 10.0),
           child: TextFormField(
+            controller: userFirst,
             style: TextStyle(
               color: Colors.white,
               fontSize: 15,
@@ -51,6 +68,7 @@ class _ProfilePageState extends State<ProfilePage> {
         Padding(
           padding: const EdgeInsets.only(top: 20.0),
           child: TextFormField(
+            controller: userLast,
             style: TextStyle(
               color: Colors.white,
               fontSize: 15,
@@ -67,6 +85,7 @@ class _ProfilePageState extends State<ProfilePage> {
         Padding(
           padding: const EdgeInsets.only(top: 20.0),
           child: TextFormField(
+            controller: userPhone,
             style: TextStyle(
               color: Colors.white,
               fontSize: 15,
@@ -83,6 +102,7 @@ class _ProfilePageState extends State<ProfilePage> {
         Padding(
           padding: const EdgeInsets.only(top: 20.0),
           child: TextFormField(
+            controller: userEmail,
             style: TextStyle(
               color: Colors.white,
               fontSize: 15,
@@ -99,6 +119,7 @@ class _ProfilePageState extends State<ProfilePage> {
         Padding(
           padding: const EdgeInsets.only(top: 20.0),
           child: TextFormField(
+            controller: userCity,
             style: TextStyle(
               color: Colors.white,
               fontSize: 15,
