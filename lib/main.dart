@@ -4,7 +4,6 @@ import 'package:touchtact/pages/home.dart';
 import 'package:touchtact/pages/signup.dart';
 import 'package:touchtact/pages/profile.dart';
 import 'package:touchtact/pages/exchange_home.dart';
-import 'package:touchtact/pages/exchange_collect.dart';
 
 void main() {
   runApp(const TouchTact());
@@ -46,6 +45,9 @@ class TouchTact extends StatelessWidget {
               color: Colors.indigoAccent.shade100
             ),
           ),
+        ),
+        bottomSheetTheme: BottomSheetThemeData(
+          backgroundColor: Colors.grey[900]
         )
       )
     );
