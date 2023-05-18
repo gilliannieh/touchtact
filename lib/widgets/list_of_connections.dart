@@ -16,7 +16,7 @@ class ListOfConnections extends StatelessWidget {
           children: [
             ListTile(
               title: Text(
-                '${data[index]['name']}',
+                '${data[index]['first']} ${data[index]['last']}',
                 style: TextStyle(
                     color: Colors.white,
                     fontSize: 16,

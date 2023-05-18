@@ -3,31 +3,50 @@
 class ConnectionsData {
   static final connectionData = [
     {
-      'name': 'Eagan Notokusumo',
+      'first': 'Eagan',
+      'last': 'Notokusumo',
       'time': '20 sec',
+      'city, state' : 'Evanston, Illinois',
+      'phone': '(331) 304-8434',
+      'email': 'b4q5o7@u.northwestern.edu',
+      'instagram': '',
+      'linkedin': '',
+      'twitter': '',
     },
     {
-      'name': 'Samar Saleem',
+      'first': 'Samar',
+      'last': 'Saleem',
       'time': '20 min',
+      'city, state' : 'Evanston, Illinois',
+      'phone': '331 304 8434',
+      'email': 'samarsaleem2025@u.northwestern.edu',
+      'instagram': '',
+      'linkedin': '',
+      'twitter': '',
     },
     {
-      'name': 'Damien Koh',
+      'first': 'Damien',
+      'last': 'Koh',
       'time': '2 hr',
     },
     {
-      'name': 'Steve Ewald',
+      'first': 'Steve',
+      'last': 'Ewald',
       'time': '3 hr',
     },
     {
-      'name': 'Alexis Robles',
+      'first': 'Alexis',
+      'last': 'Robles',
       'time': '2 days',
     },
     {
-      'name': 'Daphne Zuckerman',
+      'first': 'Daphne',
+      'last': 'Zuckerman',
       'time': '2 days',
     },
     {
-      'name': 'Sneh Deshpande',
+      'first': 'Sneh',
+      'last': 'Deshpande',
       'time': '3 days',
     },
   ];

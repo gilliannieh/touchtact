@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:touchtact/pages/profile.dart';
 
 // BIZ CARD CLASS
 class BizCard extends StatefulWidget {
@@ -26,12 +27,41 @@ class _BizCardState extends State<BizCard> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    'GILLI NIEH',
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 25,
-                        fontWeight: FontWeight.w600),
+                  Row(
+                    children: [
+                      Text(
+                        'GILLI NIEH',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 25,
+                          fontWeight: FontWeight.w600),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 130),
+                        child: SizedBox(
+                          height: 30,
+                          width: 30,
+                          child: Container(
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: Colors.white,
+                            ),
+                            child: IconButton(
+                              icon: Icon(
+                                Icons.edit,
+                                color: Colors.grey.shade900,
+                                size: 15
+                              ),
+                              color: Colors.white,
+                              onPressed: () {
+                                // NAVIGATE TO PROFILE PAGE
+                                _navigateToProfile(context);
+                              },
+                            ),
+                          ),
+                        ),
+                      )
+                    ]
                   ),
                   Text(
                     'Evanston, Illinois',
@@ -42,7 +72,7 @@ class _BizCardState extends State<BizCard> {
                     ),
                   ),
                   Padding(
-                      padding: EdgeInsets.only(top: 70),
+                      padding: EdgeInsets.only(top: 50),
                       child: Row(
                         children: [
                           SizedBox(
@@ -69,7 +99,7 @@ class _BizCardState extends State<BizCard> {
                           ),
                   ])),
                   Padding(
-                      padding: EdgeInsets.only(top: 2.0),
+                      padding: EdgeInsets.only(top: 5.0),
                       child: Row(
                         children: [
                           SizedBox(
@@ -80,13 +110,19 @@ class _BizCardState extends State<BizCard> {
                               Icon(Icons.mail, color: Colors.white, size: 15),
                             )
                           ),
-                          Text('gilliannieh@gmail.com',
-                            style:
-                              TextStyle(color: Colors.white, fontSize: 12)
+                          SizedBox(
+                            width: 210,
+                            child: Text('gilliannieh@gmail.com',
+                              style:
+                                TextStyle(color: Colors.white, fontSize: 12)
+                            ),
                           ),
                   ])),
                 ],
               )),
         ));
+  }
+  void _navigateToProfile(BuildContext context) {
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) => ProfilePage()));
   }
 }
