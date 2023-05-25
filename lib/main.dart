@@ -25,7 +25,7 @@ class TouchTact extends StatelessWidget {
     // app body
     return MaterialApp(
       home: Scaffold(
-        body: Page(),
+        body: App(),
       ),
       theme: ThemeData(
         scaffoldBackgroundColor: const Color(0XFF212121),
@@ -54,15 +54,15 @@ class TouchTact extends StatelessWidget {
   }
 }
 
-class Page extends StatefulWidget {
-  const Page({super.key});
+class App extends StatefulWidget {
+  const App({super.key});
   
 
   @override
-  State<Page> createState() => _PageState();
+  State<App> createState() => _AppState();
 }
 
-class _PageState extends State<Page> {
+class _AppState extends State<App> {
   int _selectedIndex = 0;
 
   static List<Widget> _widgetOptions = <Widget>[

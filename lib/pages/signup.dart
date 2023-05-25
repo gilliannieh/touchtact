@@ -39,7 +39,7 @@ class _SignupPageState extends State<SignupPage> {
                 fontSize: 15,
               ),
               decoration: InputDecoration(
-                labelText: 'first name',
+                label: Text('first name'),
                 labelStyle: TextStyle(
                   color: Colors.white,
                   fontSize: 15,
@@ -56,7 +56,7 @@ class _SignupPageState extends State<SignupPage> {
                 fontSize: 15,
               ),
               decoration: InputDecoration(
-                labelText: 'last name',
+                label: Text('last name'),
                 labelStyle: TextStyle(
                   color: Colors.white,
                   fontSize: 15,
@@ -73,7 +73,7 @@ class _SignupPageState extends State<SignupPage> {
                 fontSize: 15,
               ),
               decoration: InputDecoration(
-                labelText: 'phone number',
+                label: Text('phone number'),
                 labelStyle: TextStyle(
                   color: Colors.white,
                   fontSize: 15,
@@ -90,7 +90,7 @@ class _SignupPageState extends State<SignupPage> {
                 fontSize: 15,
               ),
               decoration: InputDecoration(
-                labelText: 'email',
+                label: Text('email'),
                 labelStyle: TextStyle(
                   color: Colors.white,
                   fontSize: 15,
@@ -107,13 +107,23 @@ class _SignupPageState extends State<SignupPage> {
                 fontSize: 15,
               ),
               decoration: InputDecoration(
-                labelText: 'city, state',
+                label: Text('city, state'),
                 labelStyle: TextStyle(
                   color: Colors.white,
                   fontSize: 15,
                 )
               ),
             ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 30.0),
+            child: OutlinedButton(
+                style: OutlinedButton.styleFrom(
+                    backgroundColor: Colors.grey.shade900,
+                    foregroundColor: Colors.indigoAccent.shade100,
+                    side: BorderSide(color: Colors.indigoAccent.shade100)),
+                onPressed: () {},
+                child: const Text("let's go")),
           ),
         ],
       ),

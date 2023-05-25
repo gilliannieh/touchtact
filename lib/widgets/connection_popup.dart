@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:touchtact/data/connections_data.dart';
-import 'package:url_launcher/url_launcher.dart';
+//import 'package:url_launcher/url_launcher.dart';
+
 
 class ConnectionPopup extends StatefulWidget {
   ConnectionPopup({super.key});
@@ -97,7 +98,8 @@ class _ConnectionPopupState extends State<ConnectionPopup> {
                               ),
                             )
                           ),
-                          Text('b4q5o7@u.northwestern.edu',
+                          Text(
+                            'b4q5o7@u.northwestern.edu',
                             style: TextStyle(
                               color: Colors.white, 
                               fontSize: 15

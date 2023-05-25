@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// PAGE
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
 
@@ -8,11 +9,29 @@ class ProfilePage extends StatefulWidget {
 }
 
 class _ProfilePageState extends State<ProfilePage> {
+  @override
+  Widget build(BuildContext context) {
+    return const Card(
+      child: ProfileForm()
+    );
+  }
+}
+
+// FORM
+class ProfileForm extends StatefulWidget {
+  const ProfileForm({super.key});
+
+  @override
+  State<ProfileForm> createState() => _ProfileFormState();
+}
+
+class _ProfileFormState extends State<ProfileForm> {
   final userFirst = TextEditingController();
   final userLast = TextEditingController();
   final userPhone = TextEditingController();
   final userEmail = TextEditingController();
   final userCity = TextEditingController();
+  final _formKey = GlobalKey<FormState>();
 
   @override
   void dispose() {
@@ -26,10 +45,13 @@ class _ProfilePageState extends State<ProfilePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Padding(
+    return Form(
+      key: _formKey,
+      child: Container(
+        color: Colors.grey[900],
         padding: const EdgeInsets.only(top: 150.0, left: 40, right: 40),
         child: Column(children: [
+          BackButton(),
           Text('Gilli Nieh',
               style: TextStyle(
                   color: Colors.white,
@@ -58,11 +80,18 @@ class _ProfilePageState extends State<ProfilePage> {
                 fontSize: 15,
               ),
               decoration: InputDecoration(
-                  labelText: 'first name',
-                  labelStyle: TextStyle(
-                    color: Colors.white,
-                    fontSize: 15,
-                  )),
+                labelText: 'first name',
+                labelStyle: TextStyle(
+                  color: Colors.white,
+                  fontSize: 15,
+                )
+              ),
+              validator: (value) {
+                if (value == null || value.isEmpty) {
+                  return 'enter your first name';
+                }
+                return null;
+              },
             ),
           ),
           // LAST NAME
@@ -75,11 +104,18 @@ class _ProfilePageState extends State<ProfilePage> {
                 fontSize: 15,
               ),
               decoration: InputDecoration(
-                  labelText: 'last name',
-                  labelStyle: TextStyle(
-                    color: Colors.white,
-                    fontSize: 15,
-                  )),
+                labelText: 'last name',
+                labelStyle: TextStyle(
+                  color: Colors.white,
+                  fontSize: 15,
+                )
+              ),
+              validator: (value) {
+                if (value == null || value.isEmpty) {
+                  return 'enter your first name';
+                }
+                return null;
+              },
             ),
           ),
           // PHONE NUMBER
@@ -96,7 +132,14 @@ class _ProfilePageState extends State<ProfilePage> {
                   labelStyle: TextStyle(
                     color: Colors.white,
                     fontSize: 15,
-                  )),
+                  )
+              ),
+              validator: (value) {
+                if (value == null || value.isEmpty) {
+                  return 'enter your first name';
+                }
+                return null;
+              },
             ),
           ),
           // EMAIL
@@ -109,11 +152,18 @@ class _ProfilePageState extends State<ProfilePage> {
                 fontSize: 15,
               ),
               decoration: InputDecoration(
-                  labelText: 'email',
-                  labelStyle: TextStyle(
-                    color: Colors.white,
-                    fontSize: 15,
-                  )),
+                labelText: 'email',
+                labelStyle: TextStyle(
+                  color: Colors.white,
+                  fontSize: 15,
+                )
+              ),
+              validator: (value) {
+                if (value == null || value.isEmpty) {
+                  return 'enter your first name';
+                }
+                return null;
+              },
             ),
           ),
           // CITY & STATE
@@ -126,21 +176,36 @@ class _ProfilePageState extends State<ProfilePage> {
                 fontSize: 15,
               ),
               decoration: InputDecoration(
-                  labelText: 'city, state',
-                  labelStyle: TextStyle(
-                    color: Colors.white,
-                    fontSize: 15,
-                  )),
+                labelText: 'city, state',
+                labelStyle: TextStyle(
+                  color: Colors.white,
+                  fontSize: 15,
+                )
+              ),
+              validator: (value) {
+                if (value == null || value.isEmpty) {
+                  return 'enter your first name';
+                }
+                return null;
+              },
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 50.0),
+            padding: const EdgeInsets.only(top: 30.0),
             child: OutlinedButton(
                 style: OutlinedButton.styleFrom(
                     backgroundColor: Colors.grey.shade900,
                     foregroundColor: Colors.indigoAccent.shade100,
                     side: BorderSide(color: Colors.indigoAccent.shade100)),
-                onPressed: () {},
+                onPressed: () {
+                  if (_formKey.currentState!.validate()) {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(content: 
+                        Text('processing...')
+                      )
+                    );
+                  }
+                },
                 child: const Text('save changes')),
           ),
         ]),
