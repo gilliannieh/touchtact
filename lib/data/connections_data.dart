@@ -9,8 +9,8 @@ class ConnectionsData {
       'city, state' : 'Evanston, Illinois',
       'phone': '(331) 304-8434',
       'email': 'b4q5o7@u.northwestern.edu',
-      'instagram': '',
-      'linkedin': '',
+      'instagram': 'https://www.instagram.com/r.eagan5/',
+      'linkedin': 'https://www.linkedin.com/in/eagan-notokusumo/',
       'twitter': '',
     },
     {

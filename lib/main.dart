@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:touchtact/pages/home.dart';
-import 'package:touchtact/pages/signup.dart';
+import 'package:touchtact/pages/signup_1.dart';
 import 'package:touchtact/pages/profile.dart';
 import 'package:touchtact/pages/exchange_home.dart';
+import 'package:touchtact/pages/signup_2.dart';
 
 void main() {
   runApp(const TouchTact());

@@ -1,21 +1,29 @@
 import 'package:flutter/material.dart';
 
-class SignupPage extends StatefulWidget {
-  const SignupPage({super.key});
+class SignupPage2 extends StatefulWidget {
+  const SignupPage2({super.key});
 
   @override
-  State<SignupPage> createState() => _SignupPageState();
+  State<SignupPage2> createState() => _SignupPage2State();
 }
 
-class _SignupPageState extends State<SignupPage> {
+class _SignupPage2State extends State<SignupPage2> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 150.0, left: 40, right: 40),
+      padding: const EdgeInsets.only(top: 120.0, left: 40, right: 40),
       child: Column(
         children: [
           Text(
-            'welcome.',
+            'nice to meet you,',
+            style: TextStyle(
+              color: Colors.indigoAccent[100],
+              fontSize: 30,
+              fontWeight: FontWeight.w600
+            )
+          ),
+          Text(
+            'Gilli.',
             style: TextStyle(
               color: Colors.indigoAccent[100],
               fontSize: 50,
@@ -23,14 +31,14 @@ class _SignupPageState extends State<SignupPage> {
             )
           ),
           Text(
-            'first things first, a little about you.',
+            'give us your socials!',
             style: TextStyle(
               color: Colors.white,
               fontSize: 20,
               fontWeight: FontWeight.w200
             )
           ),
-          // FIRST NAME
+          // LINKEDIN
           Padding(
             padding: const EdgeInsets.only(top: 50.0),
             child: TextFormField(
@@ -39,7 +47,7 @@ class _SignupPageState extends State<SignupPage> {
                 fontSize: 15,
               ),
               decoration: InputDecoration(
-                label: Text('first name'),
+                label: Text('linkedin'),
                 labelStyle: TextStyle(
                   color: Colors.white,
                   fontSize: 15,
@@ -47,7 +55,7 @@ class _SignupPageState extends State<SignupPage> {
               ),
             ),
           ),
-          // LAST NAME
+          // INSTAGRAM
           Padding(
             padding: const EdgeInsets.only(top: 20.0),
             child: TextFormField(
@@ -56,7 +64,7 @@ class _SignupPageState extends State<SignupPage> {
                 fontSize: 15,
               ),
               decoration: InputDecoration(
-                label: Text('last name'),
+                label: Text('instagram'),
                 labelStyle: TextStyle(
                   color: Colors.white,
                   fontSize: 15,
@@ -64,7 +72,7 @@ class _SignupPageState extends State<SignupPage> {
               ),
             ),
           ),
-          // PHONE NUMBER
+          // TWITTER 
           Padding(
             padding: const EdgeInsets.only(top: 20.0),
             child: TextFormField(
@@ -73,7 +81,7 @@ class _SignupPageState extends State<SignupPage> {
                 fontSize: 15,
               ),
               decoration: InputDecoration(
-                label: Text('phone number'),
+                label: Text('twitter'),
                 labelStyle: TextStyle(
                   color: Colors.white,
                   fontSize: 15,
@@ -81,7 +89,7 @@ class _SignupPageState extends State<SignupPage> {
               ),
             ),
           ),
-          // EMAIL
+          // FACEBOOK
           Padding(
             padding: const EdgeInsets.only(top: 20.0),
             child: TextFormField(
@@ -90,24 +98,7 @@ class _SignupPageState extends State<SignupPage> {
                 fontSize: 15,
               ),
               decoration: InputDecoration(
-                label: Text('email'),
-                labelStyle: TextStyle(
-                  color: Colors.white,
-                  fontSize: 15,
-                )
-              ),
-            ),
-          ),
-          // CITY & STATE
-          Padding(
-            padding: const EdgeInsets.only(top: 20.0),
-            child: TextFormField(
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 15,
-              ),
-              decoration: InputDecoration(
-                label: Text('city, state'),
+                label: Text('facebook'),
                 labelStyle: TextStyle(
                   color: Colors.white,
                   fontSize: 15,
@@ -123,7 +114,7 @@ class _SignupPageState extends State<SignupPage> {
                     foregroundColor: Colors.indigoAccent.shade100,
                     side: BorderSide(color: Colors.indigoAccent.shade100)),
                 onPressed: () {},
-                child: const Text("let's go")),
+                child: const Text("continue")),
           ),
         ],
       ),

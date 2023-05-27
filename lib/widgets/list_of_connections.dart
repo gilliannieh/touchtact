@@ -1,6 +1,32 @@
 import 'package:flutter/material.dart';
 import 'package:touchtact/data/connections_data.dart';
 import 'package:touchtact/widgets/connection_popup.dart';
+import 'package:touchtact/widgets/eagan_card.dart';
+import 'package:touchtact/widgets/samar_card.dart';
+import 'package:touchtact/widgets/steve_card.dart';
+import 'package:touchtact/widgets/alexis_card.dart';
+
+class List extends StatefulWidget {
+  const List({super.key});
+
+  @override
+  State<List> createState() => _ListState();
+}
+
+class _ListState extends State<List> {
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      padding: EdgeInsets.only(top: 10),
+      children: [
+        Eagan(),
+        Samar(),
+        Steve(),
+        Alexis(),
+      ],
+    );
+  }
+}
 
 // LIST OF CONNECTIONS CLASS
 class ListOfConnections extends StatelessWidget {

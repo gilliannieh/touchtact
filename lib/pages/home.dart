@@ -41,10 +41,10 @@ class _HomePageState extends State<HomePage> {
             )
           ),
           Expanded(
-            child: ListOfConnections()
+            child: List()
           )
-        ],
-      ),
+        ]
+      )
     );
   }
 }
