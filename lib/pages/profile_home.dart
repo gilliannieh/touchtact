@@ -1,31 +1,31 @@
 import 'package:flutter/material.dart';
 
 // PAGE
-class ProfilePage extends StatefulWidget {
-  const ProfilePage({super.key});
+class CardToProfilePage extends StatefulWidget {
+  const CardToProfilePage({super.key});
 
   @override
-  State<ProfilePage> createState() => _ProfilePageState();
+  State<CardToProfilePage> createState() => _CardToProfilePageState();
 }
 
-class _ProfilePageState extends State<ProfilePage> {
+class _CardToProfilePageState extends State<CardToProfilePage> {
   @override
   Widget build(BuildContext context) {
     return const Card(
-      child: ProfileForm()
+      child: CardToProfileForm()
     );
   }
 }
 
 // FORM
-class ProfileForm extends StatefulWidget {
-  const ProfileForm({super.key});
+class CardToProfileForm extends StatefulWidget {
+  const CardToProfileForm({super.key});
 
   @override
-  State<ProfileForm> createState() => _ProfileFormState();
+  State<CardToProfileForm> createState() => _CardToProfileFormState();
 }
 
-class _ProfileFormState extends State<ProfileForm> {
+class _CardToProfileFormState extends State<CardToProfileForm> {
   final userFirst = TextEditingController();
   final userLast = TextEditingController();
   final userPhone = TextEditingController();
@@ -49,13 +49,25 @@ class _ProfileFormState extends State<ProfileForm> {
       key: _formKey,
       child: Container(
         color: Colors.grey[900],
-        padding: const EdgeInsets.only(top: 150.0, left: 40, right: 40),
+        padding: const EdgeInsets.only(top: 0, left: 40, right: 40),
         child: Column(children: [
-          Text('Gilli Nieh',
-              style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 35,
-                  fontWeight: FontWeight.w500)),
+          Align(
+            alignment: Alignment.topLeft,
+            child: Padding(
+              padding: EdgeInsets.only(top: 70),
+              child: BackButton(
+                color: Colors.white,
+              ),
+            ), 
+          ),
+          Padding(
+            padding: EdgeInsets.only(top: 40),
+            child: Text('Gilli Nieh',
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 35,
+                    fontWeight: FontWeight.w500)),
+          ),
           Text('Evanston, Illinois',
               style: TextStyle(
                   color: Colors.white,

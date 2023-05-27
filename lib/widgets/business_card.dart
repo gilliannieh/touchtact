@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:touchtact/pages/profile.dart';
+import 'package:touchtact/pages/profile_home.dart';
 
 // BIZ CARD CLASS
 class BizCard extends StatefulWidget {
@@ -133,6 +133,6 @@ class _BizCardState extends State<BizCard> {
     );
   }
   void _navigateToProfile(BuildContext context) {
-    Navigator.of(context).push(MaterialPageRoute(builder: (context) => ProfilePage()));
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) => CardToProfilePage()));
   }
 }
